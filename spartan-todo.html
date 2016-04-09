@@ -1,0 +1,24 @@
+<head>
+  <title>spartan-todo</title>
+</head>
+
+<body>
+  <h1>To-do list</h1>
+	{{>list}}
+	{{>controls}}
+</body>
+
+<template name="list">
+	<ul>
+		{{#each items}}
+			<li class="{{doneClass}}">{{description}}</li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="controls">
+	<form>
+		<input type="text" id="newItem">
+		<input type="submit" id="add" value="Add"/>
+	</form>
+</template>
